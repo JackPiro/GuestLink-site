@@ -17,7 +17,7 @@ env:
   DEPLOYMENT_FOLDER: dist
 
 jobs:
-# Please do not rename this job
+  # Please do not rename this job
   build-project:
     name: build GuestLink-site
     runs-on: ubuntu-latest
@@ -27,14 +27,18 @@ jobs:
         with:
           submodules: 'recursive'
 
+      - name: Set up Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: '16.14.2' # choose the node version that matches your development environment
+
+      - name: Install npm dependencies
+        run: npm install
+
       - name: Run script
-# uncomment the following lines if you want to add environment variables for this step
-#        env:
-#          MY_ENV_VAR: value-for-my-env-var
-#          MY_SECRET_ENV_VAR: ${{ secrets.MY_SECRET }} # here you can find information how to create secrets: https://docs.github.com/en/actions/security-guides/encrypted-secrets
         run: npm run build
 
-# Please do not touch the following action
+      # Please do not touch the following action
       - name: Store deployment content
         uses: ionos-deploy-now/artifact-action@v1
         with:
