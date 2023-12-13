@@ -2,7 +2,7 @@
   "name": "GuestLink",
   "version": "1.0.0",
   "scripts": {
-    "build": "./node_modules/.bin/tailwindcss -i ./main.css -o ./dist/main.css --minify"
+    "build": "npx tailwindcss -i ./src/input.css -o ./dist/output.css --watch"
   },  
   "dependencies": {
     "tailwindcss": "^3.3.5"
