@@ -2,8 +2,8 @@
   "name": "GuestLink",
   "version": "1.0.0",
   "scripts": {
-    "build": "npx tailwindcss -i ./src/main.css -o ./dist/output.css --watch"
-  },  
+    "build": "tailwindcss -i ./main.css -o ./dist/main.css --minify"
+  },
   "dependencies": {
     "tailwindcss": "^3.3.5"
   }
