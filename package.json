@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "scripts": {
     "build": "tailwindcss -i ./site-serve/main.css -o ./dist/main.css --minify",
-    "start": "serve ./site-serve"
+    "start": "serve ./site-serve/main.html"
   },
   "dependencies": {
     "tailwindcss": "^3.3.5"
