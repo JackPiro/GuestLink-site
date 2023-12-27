@@ -1,9 +1,8 @@
 module.exports = {
-  content: ["./site/site-serve/**/*.{html,js}"],
+  content: ["./site-serve/**/*.{html,js}"],
   theme: {
     extend: {},
   },
   plugins: [],
 }
-
 

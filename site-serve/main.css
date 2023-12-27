@@ -1,4 +1,8 @@
 
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 element.style {
     --plyr-color-main: #FF5A5F;
     color-scheme: light;
@@ -18,7 +22,3 @@ html {
     font-feature-settings: normal;
     font-variation-settings: normal;
 }
-
-/* @tailwind base;
-@tailwind components;
-@tailwind utilities; */
