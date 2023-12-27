@@ -1,5 +1,5 @@
 module.exports = {
-  content: ["./site/**/*.{html,js}"],
+  content: ["./site/site-serve/**/*.{html,js}"],
   theme: {
     extend: {},
   },
