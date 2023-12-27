@@ -2,7 +2,7 @@
   "name": "GuestLink",
   "version": "1.0.0",
   "scripts": {
-    "build": "tailwindcss -i ./main.css -o ./dist/main.css --minify",
+    "build": "tailwindcss -i ./site-serve/main.css -o ./dist/main.css --minify",
     "start": "serve ./site-serve"
   },
   "dependencies": {
