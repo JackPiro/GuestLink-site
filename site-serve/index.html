@@ -392,21 +392,24 @@
          <iframe frameborder="0" id="glasp-sidebar-iframe" name="glasp-sidebar-iframe" style="max-width: 300px; height: 100%; background: rgb(255, 255, 255); resize: horizontal; direction: rtl; margin: auto; position: fixed; top: 0px; right: 0px; left: auto; z-index: 2147483647; width: 0px !important; min-width: 0px !important; display: block;">
          </iframe>
       </div>
-      <div>
-         <p className="text-black">Chat with GuestLink!</p>
-         <script type="text/javascript">
-            (function(d, t) {
-               var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
-               v.onload = function() {
-                  window.voiceflow.chat.load({
-                  verify: { projectID: '65431398bfefa7000746eedf' },
-                  url: 'https://general-runtime.voiceflow.com',
-                  versionID: 'production'
-                  });
-               }
-               v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
-            })(document, 'script');
-         </script>
+      <div class="relative">
+         <p class="fixed bottom-24 right-0 text-black font-extrabold text-s p-1 z-10">Try Our Demo!</p>
+         <div>
+            <!-- Your script for the chat widget -->
+            <script type="text/javascript">
+               (function(d, t) {
+                  var v = d.createElement(t), s = d.getElementsByTagName(t)[0];
+                  v.onload = function() {
+                     window.voiceflow.chat.load({
+                     verify: { projectID: '65431398bfefa7000746eedf' },
+                     url: 'https://general-runtime.voiceflow.com',
+                     versionID: 'production'
+                     });
+                  }
+                  v.src = "https://cdn.voiceflow.com/widget/bundle.mjs"; v.type = "text/javascript"; s.parentNode.insertBefore(v, s);
+               })(document, 'script');
+            </script>
+         </div>
       </div>
    </body>
 </html>
