@@ -3,6 +3,25 @@
    <!-- <link rel="stylesheet" href="../dist/main.css"> -->
    <head>
       <link rel="icon" href="../images/guest_link_logo-removebg-preview.ico" type="image/x-icon">
+      <script>
+         document.addEventListener("DOMContentLoaded", function() {
+            var form = document.querySelector('form');
+            form.addEventListener('submit', function(e) {
+               e.preventDefault();
+               var formData = new FormData(form);
+               fetch(form.action, {
+                  method: 'POST',
+                  body: formData
+               }).then(response => {
+                  console.log('Success:', response);
+                  // Handle success response
+               }).catch(error => {
+                  console.error('Error:', error);
+                  // Handle error response
+               });
+            });
+            });
+      </script>
    </head>
 
    <link rel="stylesheet" href="/dist/main.css">
@@ -62,20 +81,22 @@
                      </div>
                      <div class="mt-10 space-y-4">
                         <p class="text-sm text-gray-400">
-                        GuestLink's AI connects directly to your Airbnb's support documents and provides instant responses to any questions guests may have about the property through a WhatsApp or Telegram chat interface. This 24/7 availability not only improves your guests' experience but also frees up your time to focus on what truly matters - providing an exceptional stay.
+                           GuestLink's AI connects directly to your Airbnb's support documents and provides instant responses to any questions guests may have about the property through a WhatsApp or Telegram chat interface. This 24/7 availability not only improves your guests' experience but also frees up your time to focus on what truly matters - providing an exceptional stay.
                         </p>
                         <ile-root class="mt-4 sm:max-w-lg" data-v-app="" hydrated="" id="ile-3">
-                        <form class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
-                           <label class="sr-only" for="hero-email">
+
+                        <form action="https://hooks.zapier.com/hooks/catch/17451717/3anznre/" method="post" class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
+                           <label class="sr-only" for="email">
                               Email address
                            </label>
-                           <input class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1" id="hero-email" placeholder="Enter your email..." required="" type="email"/>
+                           <input name="email" class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1" id="hero-email" placeholder="Enter your email..." required="" type="email"/>
                            <div>
-                              <button class="ui-button ui-button-base ui-button-primary" to="" type="submit">
+                              <button class="ui-button ui-button-base ui-button-primary" type="submit">
                                  Get Started
                               </button>
                            </div>
                         </form>
+
                         </ile-root>
                         <script>
                         </script>
