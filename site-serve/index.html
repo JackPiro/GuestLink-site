@@ -3,25 +3,6 @@
    <!-- <link rel="stylesheet" href="../dist/main.css"> -->
    <head>
       <link rel="icon" href="../images/guest_link_logo-removebg-preview.ico" type="image/x-icon">
-      <script>
-         document.addEventListener("DOMContentLoaded", function() {
-            var form = document.querySelector('form');
-            form.addEventListener('submit', function(e) {
-               e.preventDefault();
-               var formData = new FormData(form);
-               fetch(form.action, {
-                  method: 'POST',
-                  body: formData
-               }).then(response => {
-                  console.log('Success:', response);
-                  // Handle success response
-               }).catch(error => {
-                  console.error('Error:', error);
-                  // Handle error response
-               });
-            });
-            });
-      </script>
    </head>
 
    <link rel="stylesheet" href="/dist/main.css">
