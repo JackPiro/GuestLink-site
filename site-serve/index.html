@@ -66,7 +66,8 @@
                         </p>
                         <ile-root class="mt-4 sm:max-w-lg" data-v-app="" hydrated="" id="ile-3">
 
-                        <form action="https://hooks.zapier.com/hooks/catch/17451717/3anznre/" method="post" class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
+                        <!-- <form action="https://hooks.zapier.com/hooks/catch/17451717/3anznre/" method="post" class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU"> -->
+                        <form id="myForm" class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-4 sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
                            <label class="sr-only" for="email">
                               Email address
                            </label>
@@ -77,6 +78,26 @@
                               </button>
                            </div>
                         </form>
+
+                        <script>
+                           document.getElementById('myForm').addEventListener('submit', function(e) {
+                               e.preventDefault(); // Prevent the default form submission
+                           
+                              var formData = new FormData(this);
+                              fetch('https://hooks.zapier.com/hooks/catch/17451717/3anznre/', {
+                                 method: 'POST',
+                                 body: formData
+                              })
+                              .then(response => {
+                                 console.log('Success:', response);
+                                   // You can add code here to show a success message
+                              })
+                              .catch(error => {
+                                 console.error('Error:', error);
+                                   // You can add code here to show an error message
+                              });
+                           });
+                           </script>
 
                         </ile-root>
                         <script>
