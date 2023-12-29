@@ -328,17 +328,40 @@
                      <div class="mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg flex flex-col items-center" data-v-782fc14d="">
                      </div>
                      <ile-root class="mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg" data-v-app="" hydrated="" id="ile-4">
-                        <form class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
-                        <label class="sr-only" for="cta-email">
-                           Email address
-                        </label>
-                        <input class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1" id="cta-email" placeholder="Enter your email..." required="" type="email"/>
-                        <div>
-                           <button class="ui-button ui-button-base ui-button-primary" to="" type="submit">
-                              Get Started
-                           </button>
-                        </div>
+                        
+                        <form id="bottomMyForm" class="grid gap-2 grid-cols-1 sm:w-full sm:flex sm:items-center sm:flex-wrap mt-6 sm:mt-12 sm:mx-auto sm:max-w-lg" data-site-id="vYnYqKBkrNHBUPV6vIYU">
+                           <label class="sr-only" for="cta-email">
+                              Email address
+                           </label>
+                           <input class="block w-full px-5 py-3 text-base text-gray-900 placeholder-gray-500 border border-gray-300 rounded-md shadow-sm focus:border-primary focus:ring-primary focus-visible:ring-primary flex-1" id="cta-email" placeholder="Enter your email..." required="" type="email"/>
+                           <div>
+                              <button class="ui-button ui-button-base ui-button-primary bg-[#ff5a5e]" to="" type="submit">
+                                 Get Started
+                              </button>
+                           </div>
                         </form>
+
+                        <script>
+                           document.getElementById('bottomMyForm').addEventListener('submit', function(e) {
+                               e.preventDefault(); // Prevent the default form submission
+                           
+                              var formData = new FormData(this);
+                              fetch('https://hooks.zapier.com/hooks/catch/17451717/3anznre/', {
+                                 method: 'POST',
+                                 body: formData
+                              })
+                              .then(response => {
+                                 console.log('Success:', response);
+                                 alert("Submitted Successfully")
+                                   // You can add code here to show a success message
+                              })
+                              .catch(error => {
+                                 console.error('Error:', error);
+                                   // You can add code here to show an error message
+                              });
+                           });
+                           </script>
+
                      </ile-root>
                      <script>
                      </script>
