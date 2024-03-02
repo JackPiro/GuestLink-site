@@ -21,11 +21,22 @@
    <div id="app">
       <div>
          <div class="bg-white overflow-hidden">
+            <div class="absolute right-28 top-28 -z-10 transform-gpu overflow-hidden px-36 opacity-80" aria-hidden="true">
+               <svg class="-mr-3 top-8 right-1/2 lg:m-0 lg:left-0" width="404" height="392" fill="none" viewBox="0 0 404 392">
+                  <defs>
+                     <pattern id="837c3e70-6c3a-44e6-8854-cc48c737b659" x="0" y="0" width="20" height="20"
+                        patternUnits="userSpaceOnUse">
+                        <rect x="0" y="0" width="4" height="4" class="text-gray-200 dark:text-slate-800" fill="currentColor"></rect>
+                     </pattern>
+                  </defs>
+                  <rect width="404" height="392" fill="url(#837c3e70-6c3a-44e6-8854-cc48c737b659)"></rect>
+               </svg>
+            </div>
             <ile-root id="ile-1">
-               <div class="relative isolate z-10">
+               <div class="relative isolate z-10 mb-4">
                   <div class="px-6 py-6 lg:px-8">
                      <nav class="flex items-center justify-between">
-                        <a class="flex flex-wrap items-center lg:flex-1 gap-x-2" href="https://www.guestlinkai.com">
+                        <a class="flex flex-wrap items-center lg:flex-1 gap-x-2" href="https://guestlinkai.com">
                            <img alt="GuestLink logo" class="w-auto h-8"
                               src="https://storage.googleapis.com/mixo-files/logos/chatBotPro-1688776835107.svg" />
                            </img>
@@ -33,10 +44,14 @@
                               GuestLink
                            </p>
                         </a>
-                        <div class="flex items-center space-x-2 lg:hidden">
-                        </div>
-                        <div class="hidden lg:flex lg:gap-x-12">
-                        </div>
+                        <a href="./index.html"
+                           class="mx-10 text-gray-900 dark:text-white text-lg font-semibold leading-8 font-sans preview-menu-wrapper relative">
+                           Our Service
+                        </a>
+                        <a href="./pricing.html"
+                           class="mx-10 text-gray-900 dark:text-white text-lg font-semibold leading-8 font-sans preview-menu-wrapper relative">
+                           Pricing
+                        </a>
                         <div class="hidden lg:flex lg:flex-1 lg:justify-end lg:items-center lg:space-x-4">
                         </div>
                      </nav>
@@ -46,6 +61,7 @@
                   </div>
                </div>
             </ile-root>
+            
             <div class="section-spacing">
                <section class="overflow-hidden lg:relative pt-12 sm:pt-20 md:pt-24 lg:pt-32" id="hero">
                   <div
@@ -122,38 +138,16 @@
                                  import { h as e, c as r } from "/assets/iles.eb302c32.js"; import { _ as t } from "/assets/SignupForm.476d22d8.js"; import "/assets/vendor-vue.a4f77483.js"; import "/assets/UiButton.4f919c66.js"; import "/assets/vite.c27b6911.js"; e(r, t, "ile-3", { name: "hero", placeholder: "Enter your email...", "button-label": "Get Started", "site-id": "vYnYqKBkrNHBUPV6vIYU", class: "mt-4 sm:max-w-lg" }, {});
                               </script>
                            </div>
-                           <div class="ratings mt-6">
-                              <div class="flex items-center gap-3 divide-x divide-gray-300 text-center sm:text-left">
-                                 <div class="flex flex-wrap flex-shrink-0">
-                                    <svg class="w-5 h-5 text-yellow-400">
-                                       <path>
-                                       </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-400">
-                                       <path>
-                                       </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-400">
-                                       <path>
-                                       </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-400">
-                                       <path>
-                                       </path>
-                                    </svg>
-                                    <svg class="w-5 h-5 text-yellow-400">
-                                       <path>
-                                       </path>
-                                    </svg>
-                                 </div>
-                                 <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">
-                                    Efficient automation
-                                 </div>
-                                 <div class="min-w-0 py-1 text-sm text-gray-500 pl-3">
-                                    Seamless communication
-                                 </div>
-                              </div>
-                           </div>
+                           <!-- Calendly link widget begin -->
+                           <button class="bg-[#ff5a5f] ml-40 shadow-sm">
+                              <link href="https://assets.calendly.com/assets/external/widget.css" rel="stylesheet">
+                              <script src="https://assets.calendly.com/assets/external/widget.js" type="text/javascript" async></script>
+                              <a href=""
+                                 onclick="Calendly.initPopupWidget({url: 'https://calendly.com/guestlink?hide_landing_page_details=1&hide_gdpr_banner=1&primary_color=ff5a5f'});return false;">Find
+                                 Out More!</a>
+                              <!-- Calendly link widget end -->
+                           </button>
+                           
                         </div>
                      </div>
                   </div>
@@ -468,6 +462,7 @@
                      <p class="sm:text-center text-xs leading-5 text-gray-500">
                         © All rights reserved.
                      </p>
+
                   </div>
                </footer>
             </div>
